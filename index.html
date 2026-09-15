@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Deck — Trivia Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Quiz Deck</h1>
+      <p class="tagline">A browsable card catalogue of trivia, pulled live from the Open Trivia Database.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Filter trivia questions">
+      <div class="control-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="">Any category</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="">Any difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="amount">Number of cards</label>
+        <select id="amount">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+
+      <button id="draw-btn" type="button">Draw cards</button>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <section id="deck" class="deck" aria-label="Trivia cards"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Questions supplied by the <a href="https://opentdb.com" target="_blank" rel="noopener">Open Trivia Database</a>, used under CC BY-SA 4.0.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
